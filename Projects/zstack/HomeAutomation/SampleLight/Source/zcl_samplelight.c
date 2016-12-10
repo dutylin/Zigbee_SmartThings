@@ -959,15 +959,15 @@ static void zclSampleLight_OnOffCB( uint8 cmd )
 #endif
   
   //upate 9/12/2016
-//  rptcmd.numAttr = 1;
-//  rptcmd.attrList[0].attrID = ATTRID_ON_OFF;
-//  rptcmd.attrList[0].dataType = ZCL_DATATYPE_BOOLEAN;
-//  rptcmd.attrList[0].attrData = (uint8*)&zclSampleLight_OnOff;
-//
-//  // Set destination address to indirect
-//  zclSampleLight_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
-//  zclSampleLight_DstAddr.addr.shortAddr = 0;
-//  zcl_SendReportCmd(SAMPLELIGHT_ENDPOINT,&zclSampleLight_DstAddr, ZCL_CLUSTER_ID_GEN_ON_OFF, &rptcmd, ZCL_FRAME_CLIENT_SERVER_DIR, false, 0 );
+  rptcmd.numAttr = 1;
+  rptcmd.attrList[0].attrID = ATTRID_ON_OFF;
+  rptcmd.attrList[0].dataType = ZCL_DATATYPE_BOOLEAN;
+  rptcmd.attrList[0].attrData = (uint8*)&zclSampleLight_OnOff;
+
+  // Set destination address to indirect
+  zclSampleLight_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+  zclSampleLight_DstAddr.addr.shortAddr = 0;
+  zcl_SendReportCmd(SAMPLELIGHT_ENDPOINT,&zclSampleLight_DstAddr, ZCL_CLUSTER_ID_GEN_ON_OFF, &rptcmd, ZCL_FRAME_CLIENT_SERVER_DIR, false, 0 );
   //end update
   
   // update the display
