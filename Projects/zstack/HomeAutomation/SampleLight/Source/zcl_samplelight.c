@@ -967,8 +967,10 @@ static void zclSampleLight_OnOffCB( uint8 cmd )
   // Set destination address to indirect
   zclSampleLight_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
   zclSampleLight_DstAddr.addr.shortAddr = 0;
-  zcl_SendReportCmd(SAMPLELIGHT_ENDPOINT,&zclSampleLight_DstAddr, ZCL_CLUSTER_ID_GEN_ON_OFF, &rptcmd, ZCL_FRAME_CLIENT_SERVER_DIR, false, 0 );
-
+  zcl_SendReportCmd(SAMPLELIGHT_ENDPOINT,&zclSampleLight_DstAddr, ZCL_CLUSTER_ID_GEN_ON_OFF, &rptcmd, ZCL_FRAME_SERVER_CLIENT_DIR, false, 0 );
+  //end update
+  
+  
   // update the display
   zclSampleLight_LcdDisplayUpdate( );
 }

@@ -1,3 +1,14 @@
 *.pbd
 *.browse
 *.pbi
+*.a51
+*.hex
+*.lst
+*.s51
+*.map
+*.cout
+*.r51
+*.dep
+*.bat
+*.xcl
+*.wsdt
